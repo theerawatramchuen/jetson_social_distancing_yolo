@@ -1,3 +1,5 @@
+# Require OpenCV 4.5 Installation https://qengineering.eu/install-opencv-4.5-on-jetson-nano.html
+# 
 # import the necessary packages
 from detect import social_distancing_config as config
 from detect.detection import detect_people
