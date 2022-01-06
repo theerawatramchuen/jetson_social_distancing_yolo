@@ -1,4 +1,8 @@
 ## jetson_social_distancing_yolo
+
+### YOLOv4 CrowdHuman Tutorial
+https://github.com/jkjung-avt/yolov4_crowdhuman
+
 ### Tensorrt Demo
 https://github.com/jkjung-avt/tensorrt_demos
 https://github.com/theerawatramchuen/tensorrt_demos
