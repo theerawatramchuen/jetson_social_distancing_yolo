@@ -1,0 +1,21 @@
+./darknet detector train data/crowdhuman-608x608.data \
+                           cfg/yolov4-crowdhuman-608x608.cfg \
+                           yolov4.conv.137 -map -gpus 0
+
+./darknet detector train data/crowdhuman-608x608.data \
+                           cfg/yolov4-crowdhuman-608x608.cfg \
+                           backup/yolov4-crowdhuman-608x608_best.weights \
+                           yolov4.conv.137 -map -gpus 0
+
+python3 trt_yolo.py --video ${HOME}/Videos/u3canteen.mp4 \
+                      -c 2 -m yolov4-crowdhuman-608x608
+
+python3 trt_yolo.py --video /dev/video0 \
+                      -c 2 -m yolov4-crowdhuman-608x608
+
+python3 trt_yolo.py --video 'rtsp://data_analytic:TcAnTaRa9721&&!@10.158.14.76:554/ch1-s1' -c 2 -m yolov4-crowdhuman-608x608
+
+python3 trt_yolo.py --video  'rtsp://data_analytic:TcAnTaRa9721xx#@10.153.60.87' -c 2 -m yolov4-crowdhuman-608x608
+
+python3 trt_yolo.py --video  'rtsp://data_analytic:TcAnTaRa9721881@10.158.8.19' -c 2 -m yolov4-crowdhuman-608x608
+
